@@ -44,7 +44,7 @@ func TestGameAddTurn(t *testing.T) {
 	v := g.p[0].s
 	g.AddTurn(c, v)
 
-	// No cordinate error scenarios
+	// No coordinate error scenarios
 
 	if g.f.v[c.x][c.y] != v {
 		t.Error("Game.AddTurn did not add the value in the field")
