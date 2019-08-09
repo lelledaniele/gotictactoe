@@ -22,7 +22,7 @@ func newField(n int) *field {
 }
 
 // Sets v with coordinate c in field
-func (f *field) setValue(c Coordinate2, v byte) error {
+func (f *field) setValue(c Coordinate2D, v byte) error {
 	if c.x < 0 || c.x >= f.n || c.y < 0 || c.y >= f.n {
 		return errors.New("Requested a cell out of the field")
 	}
