@@ -32,8 +32,8 @@ func (f *field) setValue(c Coordinate2D, v byte) error {
 	return nil
 }
 
-// Finds the cells with value v and returns the coordinates
-func (f *field) findCellsWithValue(v byte) []Coordinate2D {
+// FindCellsWithValue finds the cells with value v and returns the coordinates
+func (f *field) FindCellsWithValue(v byte) []Coordinate2D {
 	var co []Coordinate2D
 
 	for x := range f.v {
