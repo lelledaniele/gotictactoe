@@ -99,11 +99,21 @@ func TestGetWinner(t *testing.T) {
 	}
 }
 
+// Tests GetPlayers matches the game.p
 func TestGetPlayers(t *testing.T) {
 	g := NewGame(2)
 
 	if !reflect.DeepEqual(g.GetPlayers(), g.p) {
 		t.Error("Game.GetPlayers return is incorrect")
+	}
+}
+
+// Tests GetBattleField matches the game.f.v
+func GetBattleField(t *testing.T) {
+	g := NewGame(2)
+
+	if !reflect.DeepEqual(g.GetBattleField(), g.f.v) {
+		t.Error("Game.GetBattleField return is incorrect")
 	}
 }
 

@@ -55,6 +55,11 @@ func (g *Game) GetPlayers() []Player {
 	return g.p
 }
 
+// GetBattleField exposes game.f.v property
+func (g *Game) GetBattleField() [][]byte {
+	return g.f.v
+}
+
 // Gets player by symbol from g.p slice
 func (g *Game) getPlayerBySymbol(s byte) (*Player, error) {
 	p := new(Player)
