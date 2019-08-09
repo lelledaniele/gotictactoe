@@ -68,3 +68,8 @@ func (g *Game) getPlayerBySymbol(s byte) (*Player, error) {
 
 	return p, nil
 }
+
+// GetCellsWithEmptyValue finds the cells with value 0 and returns the coordinates
+func (g *Game) GetCellsWithEmptyValue() []Coordinate2D {
+	return g.f.findCellsWithValue(0)
+}
