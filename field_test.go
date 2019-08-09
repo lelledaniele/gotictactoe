@@ -122,7 +122,7 @@ func TestFindCellsWithValue(t *testing.T) {
 		f.v[c.x][c.y] = v
 	}
 
-	got = f.findCellsWithValue(v)
+	got = f.FindCellsWithValue(v)
 
 	if len(got) != len(vCoordinates) {
 		t.Errorf("Len of cells found is incorrect, got: %d, want: %d.", len(got), len(vCoordinates))
