@@ -50,6 +50,11 @@ func (g *Game) GetWinner() (Player, bool) {
 	return Player{}, false
 }
 
+// GetPlayers exposes game.p property
+func (g *Game) GetPlayers() []Player {
+	return g.p
+}
+
 // Gets player by symbol from g.p slice
 func (g *Game) getPlayerBySymbol(s byte) (*Player, error) {
 	p := new(Player)

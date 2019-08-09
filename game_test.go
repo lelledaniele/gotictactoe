@@ -1,6 +1,9 @@
 package gotictactoe
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 // TODO I should not check the result of a field o player function
 // There is any mock in GO?
@@ -93,6 +96,14 @@ func TestGetWinner(t *testing.T) {
 
 	if !w || g.p[1].s != p.s {
 		t.Error("Player one should have a win condition")
+	}
+}
+
+func TestGetPlayers(t *testing.T) {
+	g := NewGame(2)
+
+	if !reflect.DeepEqual(g.GetPlayers(), g.p) {
+		t.Error("Game.GetPlayers return is incorrect")
 	}
 }
 
