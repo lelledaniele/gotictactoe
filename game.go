@@ -56,6 +56,7 @@ func (g *Game) GetPlayers() []Player {
 }
 
 // GetBattleField exposes game.f.v property
+// TODO Maybe is better to return a Reader?
 func (g *Game) GetBattleField() [][]byte {
 	return g.f.v
 }
