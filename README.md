@@ -6,6 +6,9 @@ I refactored this project a couple of times to get any possible experience with 
 
 I am open to any feedback you would like to give me.
 
+It was fun to develop Tic Tac Toe.
+However, I will stop to improve this package, and I will concentrate on other projects to learn Golang.
+
 ## Test
 
 `go test`
