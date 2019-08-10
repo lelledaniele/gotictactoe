@@ -109,8 +109,9 @@ func TestSetValue(t *testing.T) {
 
 // Test if find the cells with value v
 func TestFindCellsWithValue(t *testing.T) {
+	var got []Coordinate2D
 	v, f := byte('X'), newField(3)
-	got, vCoordinates := []Coordinate2D{}, []Coordinate2D{
+	vCoordinates := []Coordinate2D{
 		*NewCoordinate2D(0, 0),
 		*NewCoordinate2D(0, 1),
 		*NewCoordinate2D(2, 2),

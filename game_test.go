@@ -45,9 +45,13 @@ func TestGameAddTurn(t *testing.T) {
 	c := Coordinate2D{x, y}
 	g := NewGame(n)
 	v := g.p[0].s
-	g.AddTurn(c, v)
 
 	// No coordinate error scenarios
+	e = g.AddTurn(c, v)
+
+	if e != nil {
+		t.Error("Game.AddTurn returns error with valid coordinate")
+	}
 
 	if g.f.v[c.x][c.y] != v {
 		t.Error("Game.AddTurn did not add the value in the field")
@@ -61,7 +65,7 @@ func TestGameAddTurn(t *testing.T) {
 	e = g.AddTurn(Coordinate2D{-20, -20}, v)
 
 	if e == nil {
-		t.Error("Game.AddTurn with invalid coordinate did not return errors")
+		t.Error("Game.AddTurn with invalid coordinate did not return an error")
 	}
 }
 
@@ -109,7 +113,7 @@ func TestGetPlayers(t *testing.T) {
 }
 
 // Tests GetBattleField matches the game.f.v
-func GetBattleField(t *testing.T) {
+func TestGetBattleField(t *testing.T) {
 	g := NewGame(2)
 
 	if !reflect.DeepEqual(g.GetBattleField(), g.f.v) {

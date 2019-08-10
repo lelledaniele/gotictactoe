@@ -124,6 +124,10 @@ func TestAddTurn(t *testing.T) {
 	p = newPlayer(s, n)
 	e = p.addTurn(c)
 
+	if e != nil {
+		t.Errorf("Player.addTurn returns an error with valid coordinate {%d, %d} ", c.x, c.y)
+	}
+
 	if p.nr[c.x] != 1 {
 		t.Errorf("Add player turn with coordinate {%d, %d} but the nr counter is incorrect, got: %d, want: %d.", c.x, c.y, p.nr[c.x], 1)
 	}
@@ -145,6 +149,10 @@ func TestAddTurn(t *testing.T) {
 	c = *NewCoordinate2D(x, y)
 	p = newPlayer(s, n)
 	e = p.addTurn(c)
+
+	if e != nil {
+		t.Errorf("Player.addTurn returns an error with valid coordinate {%d, %d} ", c.x, c.y)
+	}
 
 	if p.nr[c.x] != 1 {
 		t.Errorf("Add player turn with coordinate {%d, %d} but the nr counter is incorrect, got: %d, want: %d.", c.x, c.y, p.nr[c.x], 1)
@@ -168,6 +176,10 @@ func TestAddTurn(t *testing.T) {
 	p = newPlayer(s, n)
 	e = p.addTurn(c)
 
+	if e != nil {
+		t.Errorf("Player.addTurn returns an error with valid coordinate {%d, %d} ", c.x, c.y)
+	}
+
 	if p.nr[c.x] != 1 {
 		t.Errorf("Add player turn with coordinate {%d, %d} but the nr counter is incorrect, got: %d, want: %d.", c.x, c.y, p.nr[c.x], 1)
 	}
@@ -190,6 +202,10 @@ func TestAddTurn(t *testing.T) {
 	p = newPlayer(s, n)
 	e = p.addTurn(c)
 
+	if e != nil {
+		t.Errorf("Player.addTurn returns an error with valid coordinate {%d, %d} ", c.x, c.y)
+	}
+
 	if p.nr[c.x] != 1 {
 		t.Errorf("Add player turn with coordinate {%d, %d} but the nr counter is incorrect, got: %d, want: %d.", c.x, c.y, p.nr[c.x], 1)
 	}
@@ -211,6 +227,10 @@ func TestAddTurn(t *testing.T) {
 	c = *NewCoordinate2D(x, y)
 	p = newPlayer(s, n)
 	e = p.addTurn(c)
+
+	if e != nil {
+		t.Errorf("Player.addTurn returns an error with valid coordinate {%d, %d} ", c.x, c.y)
+	}
 
 	if p.nr[c.x] != 1 {
 		t.Errorf("Add player turn with coordinate {%d, %d} but the nr counter is incorrect, got: %d, want: %d.", c.x, c.y, p.nr[c.x], 1)
