@@ -80,7 +80,7 @@ func TestGetWinner(t *testing.T) {
 	g = *NewGame(n)
 	p, w = g.GetWinner()
 
-	if w {
+	if !w {
 		t.Error("Game won status without any play")
 	}
 
